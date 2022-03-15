@@ -1,0 +1,6 @@
+#This is to create the cluster from one of the nodes
+redis-cli --cluster create 127.0.0.1:9080 127.0.0.1:9081 127.0.0.1:9082 127.0.0.1:9083 --cluster-replicas 1
+
+# To connect to one of the nodes in the cluster
+docker run redis-7000 sh
+redis-cli -c -h xxx.xxx.xxx.xxx -p xxxx
